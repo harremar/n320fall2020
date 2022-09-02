@@ -51,3 +51,4 @@ let newF = document.getElementById("newF");
 
 //when game is open reset button isn't visible
 newF.style.display = "none";
+
