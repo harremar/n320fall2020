@@ -1,0 +1,8 @@
+body{
+    background-color: lightcoral;
+}
+button {
+    border: none;
+    width: 100px;
+    height: 40px;
+}

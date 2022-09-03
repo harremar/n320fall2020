@@ -14,16 +14,19 @@ let synthApp = {
       this.currentInstrument = 0;
       instruments[2] = new Strings("quite");
       instruments[2].playNext(); //this gets message
+      document.body.style.backgroundColor = "lightblue";
     }
     //play percussion note
     if (this.currentInstrument === 1) {
       instruments[1] = new Percussion("low");
       instruments[1].playNext();
+      document.body.style.backgroundColor = "lightseagreen";
     }
     //play woodwinds note
     if (this.currentInstrument === 2) {
       instruments[0] = new Woodwinds("very loud");
       instruments[0].playNext();
+      document.body.style.backgroundColor = "lightcoral";
     }
     //wait 0.5sec
     setTimeout(this.playSound.bind(this), 500);
