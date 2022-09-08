@@ -28,6 +28,7 @@ for (const item of items) {
   item.addEventListener("mouseover", function handleMouseOver() {
     item.style.backgroundColor = "#79dd";
     item.style.transition = ".5s ease";
+    item.style.cursor = "pointer";
   });
   item.addEventListener("mouseout", function handleMouseOut() {
     item.style.backgroundColor = "#fff";
@@ -44,3 +45,9 @@ message.addEventListener("click", function onClick() {
   content.style.marginTop = "0px";
   content.style.paddingTop = "50px";
 });
+
+function resetAnimation(el) {
+  el.style.animation = "none";
+  el.offsetHeight; /*trigger reflow */
+  el.style.animation = null;
+}
