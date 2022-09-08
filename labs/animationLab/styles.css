@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  background-color:rgb(40, 36, 79);
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px
+}
+
+#navigationBar{
+    background-color: rgb(40, 36, 79);
+    width: 100%;
+    height: 100px;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
+}
+#navigationBar h1{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px 50px;
+    font-size: 40px;
+}
+#navigationBar .links{
+    padding: 50px;
+    
+}
+
+#navigationBar a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+#navigationBar a:hover{
+    cursor: pointer;
+    color: rgb(230, 66, 93)
+}
+
+#hero{
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    z-index: 10;
+    margin-top: -300px;
+
+
+}
+
+#content {
+    background-color: rgb(40, 36, 79);
+    /* background-color: red; */
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    justify-content: center;
+    
+}
+
+#content .item{
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    margin: 20px 40px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+
+#message{
+    /* background-color: red; */
+    width: 400px;
+   margin: 0 auto;
+   text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    position: fixed;
+    top: 400px;
+    margin-left: -400px;
+    transition: 0.3s ease;
+}
+#message:hover{
+    cursor: pointer;
+    color: rgb(230, 66, 93)
+}
