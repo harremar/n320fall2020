@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game Project 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2 id="title">TROUBLE</h2>
+    <!-- Creating the board...ik a lot of dots :'( -->
+    <div class="board" id="gameZone">
+        <div style="background-color: yellow" class="teamBlock">
+            <div class="dots"></div>
+            <div class="dots2"></div>
+            <div class="dots3"></div>
+            <div class="dots4"></div>
+            <div class="yellow-lane"></div>
+            <div class="dots5"></div>
+            <div class="dots6"></div>
+            <div class="dots7"></div>
+            <div class="dots8"></div>
+
+
+        </div>
+        <div style="background-color: red" class="teamBlock">
+            <div class="dotsr"></div>
+            <div class="dots2r"></div>
+            <div class="dots3r"></div>
+            <div class="dots4r"></div>
+            <div class="red-lane"></div>
+            <div class="dots5r"></div>
+            <div class="dots6r"></div>
+            <div class="dots7r"></div>
+            <div class="dots8r"></div>
+        </div>
+        <div style="background-color: blue" class="teamBlock">
+            <div class="dotsb"></div>
+            <div class="dots2b"></div>
+            <div class="dots3b"></div>
+            <div class="dots4b"></div>
+            <div class="blue-lane"></div>
+            <div class="dots5b"></div>
+            <div class="dots6b"></div>
+            <div class="dots7b"></div>
+            <div class="dots8b"></div>
+        </div>
+        <div style="background-color: green" class="teamBlock">
+            <div class="dotsg"></div>
+            <div class="dots2g"></div>
+            <div class="dots3g"></div>
+            <div class="dots4g"></div>
+            <div class="green-lane"></div>
+            <div class="dots5g"></div>
+            <div class="dots6g"></div>
+            <div class="dots7g"></div>
+            <div class="dots8g"></div>
+        </div>
+        <!-- THIS IS THE DICE---CLICK ON IT TO ROLL -->
+        <div class="diceGroup">
+            <svg id="diceFrame" onclick="myRoll.roll()"></svg>
+        </div>
+        <!-- still decorating board X( -->
+        <div id="dieBlocker"></div>
+        <div class="white-circle"></div>
+        <div class="white-circle2"></div>
+
+        <div class="dotted-circle"></div>
+
+        <!-- Creating players -->
+        <!-- yellow players -->
+        <svg class="yellowPlayers players" id="yp1" onclick="moveYellow(yp1)"></svg>
+        <svg class="yellowPlayers players" id="yp2" onclick="moveYellow2(yp2)"></svg>
+        <svg class="yellowPlayers players" id="yp3" onclick="moveYellow3(yp3)"></svg>
+        <svg class="yellowPlayers players" id="yp4" onclick="moveYellow4(yp4)"></svg>
+
+        <!-- red players -->
+        <svg class="redPlayers players" id="rp1" onclick="moveRed(rp1)"></svg>
+        <svg class="redPlayers players" id="rp2" onclick="moveRed2(rp2)"></svg>
+        <svg class="redPlayers players" id="rp3" onclick="moveRed3(rp3)"></svg>
+        <svg class="redPlayers players" id="rp4" onclick="moveRed4(rp4)"></svg>
+
+        <!-- green players -->
+        <svg class="greenPlayers players" id="gp1" onclick="moveGreen(gp1)"></svg>
+        <svg class="greenPlayers players" id="gp2" onclick="moveGreen(gp2)"></svg>
+        <svg class="greenPlayers players" id="gp3" onclick="moveGreen(gp3)"></svg>
+        <svg class="greenPlayers players" id="gp4" onclick="moveGreen(gp4)"></svg>
+
+        <!-- blue players -->
+        <svg class="bluePlayers players" id="bp1" onclick="moveBlue(bp1)"></svg>
+        <svg class="bluePlayers players" id="bp2" onclick="moveBlue2(bp2)"></svg>
+        <svg class="bluePlayers players" id="bp3" onclick="moveBlue3(bp3)"></svg>
+        <svg class="bluePlayers players" id="bp4" onclick="moveBlue4(bp4)"></svg>
+        
+
+    </div>
+    <!-- Creating Instructions -->
+    <div class="rollingDiceHolder">
+        <div id="Response"> Yellow, Please roll the dice</div>
+        <div id="movesLeft">You have this many moves left: </div>
+        <div class="buttons">
+           <!--button to move to next player  -->
+        <button id="newTurn" onclick="myRoll.next()">Move to next player</button>
+        </div>
+    </div>
+
+
+    <!-- connecting greensock and our app.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="app/players.js"></script>
+
+    <script src="app/app.js"></script>
+
+</body>
+</html>

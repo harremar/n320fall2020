@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes and Ladders</title>
+</head>
+<link rel="stylesheet" href="css/styles.css">
+<body>
+
+    <!-- still decorating board X( -->
+    <div id="dieBlocker"></div>
+
+    <!-- Creating Instructions -->
+    <div class="rollingDiceHolder">
+        <div id="Response"> Player 1, Please roll the dice</div>
+        <!-- <div id="movesLeft">You have this many moves left: </div> -->
+        <div class="buttons">
+           <!-- button to move to next player  -->
+        <button id="newTurn" onclick="myRoll.next()">Move to next player</button>
+        </div>
+        <!-- THIS IS THE DICE---CLICK ON IT TO ROLL -->
+        <div class="diceGroup">
+            <svg id="diceFrame" onclick="myRoll.roll()"></svg>
+        </div>
+    </div>
+    
+
+     <!-- connecting greensock and our app.js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+ 
+     <script src="app/app.js"></script>
+</body>
+</html>
